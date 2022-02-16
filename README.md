@@ -6,20 +6,15 @@ https://user-images.githubusercontent.com/56825677/154374039-18bc9f22-b3e7-4e5d-
 
 
 
-<div align="center">
-<img  width="100%" src="splash_onboard/ReadmeAsset/mockup1.png"></img>
+
+<div align="center">![screenshot]()
+
+
+<img  width="100%" src="https://user-images.githubusercontent.com/56825677/154374605-e8d16a10-a338-4978-acbc-c86d7a2a80d0.png"></img>
 </div>
 <div align="center">
-<img  width="300" height= "550"src="splash_onboard/ReadmeAsset/10.png"></img>
-<img  width="300"  height= "550"src="splash_onboard/ReadmeAsset/11.png"></img>
+<img  width="300" height= "550"src="https://user-images.githubusercontent.com/56825677/154374626-b18c5859-1165-40c2-808b-ae4301de601d.png"></img>
+<img  width="300"  height= "550"src="https://user-images.githubusercontent.com/56825677/154374646-a33e9c42-b5a9-4d0d-b140-11e55cdecee0.png"></img>
 </div>
-<hr>
-<div align="center">
-<img  width="300"src="splash_onboard/ReadmeAsset/12.png"></img>
-<img  width="300"src="splash_onboard/ReadmeAsset/13.png"></img>
-</div>
-<hr>
-<div align="center">
-<img  width="400"src="splash_onboard/ReadmeAsset/14.png"></img>
 
 </div>
