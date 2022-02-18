@@ -5,5 +5,5 @@ class LoginStrings{
   static const String loginText = "LOGIN";
   static const String emailText = "Email";
   static const String passwordText = "Forgot Password?";
-  static const  String forgotPassword = "Password";
+  static const  String forgotPassword = "Forgot Password";
 }

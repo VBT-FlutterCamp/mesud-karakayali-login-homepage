@@ -37,7 +37,7 @@ dependencies:
   kartal: ^2.3.1
   image_picker: ^0.8.4+4
   intro_slider: ^3.0.3
-  get: ^4.6.1
+
 
 dev_dependencies:
   flutter_test:

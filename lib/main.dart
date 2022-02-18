@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
        
         OnBoardView.routeName: (context) => const OnBoardView(),
         SplashScreen.routeName: (context) => const SplashScreen(),
-        LoginViewPage.routeName:(context) =>const LoginViewPage(),
+        LoginView.routeName:(context) =>const LoginView(),
         
       },
     );

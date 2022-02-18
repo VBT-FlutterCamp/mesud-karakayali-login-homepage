@@ -39,66 +39,70 @@ class _OnBoardViewState extends State<OnBoardView> {
           scrollDirection: Axis.horizontal,
           itemCount: onboardModels.length,
           itemBuilder: (context, index) {
-            return Column(
-              children: [
-                Container(
-                  // color: Colors.blue,
-                  height: context.height * 0.48,
-                  width: context.width,
-                  child: Image.asset(onboardModels[index].image,
-                      fit: BoxFit.fitWidth),
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 5),
-                  width: context.width * 1,
-                    height: context.height * 0.52,
-                    decoration: BoxDecoration(
-                    
-                      color: Colors.blue.withOpacity(0.3),
-                      borderRadius: BorderRadius.only(
-                        topLeft: context.normalRadius * 2,
-                        topRight: context.normalRadius * 2,
-                      ),
-                    ),
-
-                  child: Container(
-                    width: context.width * 1,
-                    height: context.height * 0.50,
-                    decoration: BoxDecoration(
-                    
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: context.normalRadius * 2,
-                        topRight: context.normalRadius * 2,
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        
-                        Container(
-                          height: context.height*0.32,
-                          child: Column(
-                            children: [
-                              _builddotOfPage(index, context),
-                                _buildTextColumn(index, context),
-                            ],
-                          ),
-                        ),
-                      
-                        Padding(
-                          padding: context.verticalPaddingMedium,
-                          child: _buildElevatedButtons(context, index),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            );
+            return _allPageBody(context, index);
           },
         ),
       ),
     );
+  }
+
+  Column _allPageBody(BuildContext context, int index) {
+    return Column(
+            children: [
+              Container(
+                // color: Colors.blue,
+                height: context.height * 0.48,
+                width: context.width,
+                child: Image.asset(onboardModels[index].image,
+                    fit: BoxFit.fitWidth),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 5),
+                width: context.width * 1,
+                  height: context.height * 0.52,
+                  decoration: BoxDecoration(
+                  
+                    color: Colors.blue.withOpacity(0.3),
+                    borderRadius: BorderRadius.only(
+                      topLeft: context.normalRadius * 2,
+                      topRight: context.normalRadius * 2,
+                    ),
+                  ),
+
+                child: Container(
+                  width: context.width * 1,
+                  height: context.height * 0.50,
+                  decoration: BoxDecoration(
+                  
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: context.normalRadius * 2,
+                      topRight: context.normalRadius * 2,
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      
+                      Container(
+                        height: context.height*0.32,
+                        child: Column(
+                          children: [
+                            _builddotOfPage(index, context),
+                              _buildTextColumn(index, context),
+                          ],
+                        ),
+                      ),
+                    
+                      Padding(
+                        padding: context.verticalPaddingMedium,
+                        child: _buildElevatedButtons(context, index),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          );
   }
 
   Row _buildElevatedButtons(BuildContext context, int index) {
@@ -115,7 +119,7 @@ class _OnBoardViewState extends State<OnBoardView> {
             child: const Text(ButtonStrings.skipButton),
             style: ElevatedButton.styleFrom(
               minimumSize: Size(context.width * 0.3, context.height * 0.05),
-              primary: OnboardColor.onBoardButtonSkipBG,
+              primary: OnboardColor.onBoardButtonSkip,
               elevation: 0,
             ),
           ),
@@ -123,7 +127,7 @@ class _OnBoardViewState extends State<OnBoardView> {
         ElevatedButton(
           onPressed: () {
             if (index == onboardModels.length - 1) {
-              Navigator.pushNamedAndRemoveUntil(context, LoginViewPage.routeName, (route) => false);
+              Navigator.pushNamedAndRemoveUntil(context, LoginView.routeName, (route) => false);
             } else {
               _pageController?.nextPage(
                 duration: context.durationLow,

@@ -53,6 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 
 
+
    void bekletVeYonlendir()async{
 
 
