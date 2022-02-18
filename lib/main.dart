@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vbt_sample_project/feature/homepage/view/homepage_view.dart';
 import 'package:vbt_sample_project/feature/login/view/login_view.dart';
 
 import 'core/init/navigation/navigation_route.dart';
@@ -18,12 +19,13 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: NavigationRoute.generateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: const SplashScreen(),
+      home: const HomePageView(),
       routes: {
        
         OnBoardView.routeName: (context) => const OnBoardView(),
         SplashScreen.routeName: (context) => const SplashScreen(),
         LoginView.routeName:(context) =>const LoginView(),
+        HomePageView.routeName:(context)=>const HomePageView(),
         
       },
     );

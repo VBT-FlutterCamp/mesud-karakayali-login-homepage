@@ -4,7 +4,7 @@ import '../../constants/navigation/navigation_constants.dart';
 import '../../../feature/onboard/view/onboard_view.dart';
 import '../../../feature/splash/view/splash_view.dart';
 
-import '../../../main.dart';
+
 
 class NavigationRoute {
   static Route<CupertinoPageRoute> generateRoute(RouteSettings settings, ) {

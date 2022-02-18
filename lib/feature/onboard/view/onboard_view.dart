@@ -49,6 +49,7 @@ class _OnBoardViewState extends State<OnBoardView> {
   Column _allPageBody(BuildContext context, int index) {
     return Column(
             children: [
+              //image content
               Container(
                 // color: Colors.blue,
                 height: context.height * 0.48,
@@ -56,6 +57,7 @@ class _OnBoardViewState extends State<OnBoardView> {
                 child: Image.asset(onboardModels[index].image,
                     fit: BoxFit.fitWidth),
               ),
+               //alt content
               Container(
                 padding: EdgeInsets.only(top: 5),
                 width: context.width * 1,
@@ -114,7 +116,7 @@ class _OnBoardViewState extends State<OnBoardView> {
           padding: context.horizontalPaddingNormal,
           child: ElevatedButton(
             onPressed: () {
-              
+              Navigator.pushNamedAndRemoveUntil(context, LoginView.routeName, (route) => false);
             },
             child: const Text(ButtonStrings.skipButton),
             style: ElevatedButton.styleFrom(
