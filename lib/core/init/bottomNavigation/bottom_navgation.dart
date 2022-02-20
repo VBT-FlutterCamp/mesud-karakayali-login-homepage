@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vbt_sample_project/core/constants/colors/homepage_color.dart';
 
 class BottomNavigation extends StatefulWidget {
 
@@ -9,7 +10,8 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  int selectedIndex = 5;
+  int selectedIndex=5;
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       elevation: 10,
       shape: CircularNotchedRectangle(),
       notchMargin: 5,
-      color: Colors.blue,
+      color: Colors.green.withOpacity(0.8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -25,57 +27,40 @@ class _BottomNavigationState extends State<BottomNavigation> {
               onPressed: () {
                 setState(() {
                   selectedIndex = 0;
-                  print("1. index'e tıklandı");
+                  print("ayarlara  tıklandı");
                
                 });
               },
-              icon: Icon(Icons.home,
+              icon: Icon(Icons.settings,
                   size: addSizefromSmall(selectedIndex, 0),
                   color: _fillSelectColor(selectedIndex, 0))),
+         
           IconButton(
               onPressed: () {
                 setState(() {
                   selectedIndex = 1;
-                  print("2. index'e tıklandı");
-
-              
-                });
-              },
-              icon: Icon(Icons.book,
-                  size: addSizefromSmall(selectedIndex, 1),
-                  color: _fillSelectColor(selectedIndex, 1))),
-          IconButton(
-              onPressed: () {
-                setState(() {
-                  selectedIndex = 2;
-                  print("3. index'e tıklandı");
+                  print("favorilere tıklandı");
             
                 });
               },
-              icon: Icon(Icons.access_alarm,
-                  size: addSizefromSmall(selectedIndex, 2),
-                  color: _fillSelectColor(selectedIndex, 2))),
-          IconButton(
-              onPressed: () {
-                setState(() {
-                  selectedIndex = 3;
-                  print("4. index'e tıklandı");
-                
-                });
-              },
-              icon: Icon(Icons.note,
-                  size: addSizefromSmall(selectedIndex, 3),
-                  color: _fillSelectColor(selectedIndex, 3)))
+              icon: Icon(Icons.favorite,
+                  size: addSizefromSmall(selectedIndex, 1),
+                  color: _fillSelectColor(selectedIndex, 1))),
+          
         ],
       ),
     );
   }
 
   _fillSelectColor(int selectedIndex, int i) {
-    return selectedIndex == i ? Colors.black : Colors.white;
+    return selectedIndex == i ? HomePageColor.homePageBG : Colors.white;
   }
 
   addSizefromSmall(int selectedIndex, int i) {
     return selectedIndex == i ? 35.0 : 25.0;
   }
+
+ 
 }
+
+
