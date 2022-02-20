@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: NavigationRoute.generateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: const HomePageView(),
+      home: const SplashScreen(),
       routes: {
        
         OnBoardView.routeName: (context) => const OnBoardView(),

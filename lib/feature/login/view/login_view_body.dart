@@ -3,6 +3,7 @@ import 'package:kartal/kartal.dart';
 
 import 'package:vbt_sample_project/core/constants/colors/onboard_color.dart';
 import 'package:vbt_sample_project/core/constants/strings/login_strings.dart';
+import 'package:vbt_sample_project/feature/homepage/view/homepage_view.dart';
 
 import '../../../products/widgets/my_text_form_field.dart';
 
@@ -59,7 +60,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
       padding: EdgeInsets.only(top: 20),
       alignment: Alignment.center,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>HomePageView()), (route) => false);
+        },
         child: const Text(LoginStrings.loginText),
         style: ElevatedButton.styleFrom(
           shape:  RoundedRectangleBorder(
