@@ -5,6 +5,8 @@ import 'package:vbt_sample_project/feature/login/view/login_view.dart';
 import 'core/init/navigation/navigation_route.dart';
 import 'core/init/navigation/navigation_service.dart';
 
+import 'feature/dioservice/view/photo_view.dart';
+import 'feature/httpservice/view/user_view.dart';
 import 'feature/onboard/view/onboard_view.dart';
 import 'feature/splash/view/splash_view.dart';
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: NavigationRoute.generateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: const SplashScreen(),
+      home: const PhotoView(),
       routes: {
        
         OnBoardView.routeName: (context) => const OnBoardView(),
