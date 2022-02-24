@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:vbt_sample_project/core/constants/colors/homepage_color.dart';
 import 'package:vbt_sample_project/core/init/bottomNavigation/bottom_navgation.dart';
 
-import 'homepage_view_body.dart';
+import 'todos_view_body.dart';
 
-class HomePageView extends StatefulWidget {
-  const HomePageView({Key? key}) : super(key: key);
+
+
+class TodosPageView extends StatefulWidget {
+  const TodosPageView({Key? key}) : super(key: key);
   static const routeName = '/homepage';
 
   @override
-  _HomePageViewState createState() => _HomePageViewState();
+  _TodosPageViewState createState() => _TodosPageViewState();
 }
 
-class _HomePageViewState extends State<HomePageView> {
+class _TodosPageViewState extends State<TodosPageView> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -22,9 +24,9 @@ class _HomePageViewState extends State<HomePageView> {
       //bottomNavigation üstüne gelmesini sağlayan lokasyon kodu
       //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
-      bottomNavigationBar: BottomNavigation(index:0),
+      bottomNavigationBar: BottomNavigation(index:1),
 
-      body: HomePageViewBody(),
+      body: TodosPageViewBody(),
     );
   }
 }

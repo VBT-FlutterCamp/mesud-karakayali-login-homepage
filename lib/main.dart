@@ -7,6 +7,7 @@ import 'core/init/navigation/navigation_service.dart';
 
 import 'feature/dioservice/view/photo_view.dart';
 import 'feature/httpservice/view/user_view.dart';
+import 'feature/httpservice/view/user_view_body.dart';
 import 'feature/onboard/view/onboard_view.dart';
 import 'feature/splash/view/splash_view.dart';
 

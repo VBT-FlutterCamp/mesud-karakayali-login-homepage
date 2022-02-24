@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:vbt_sample_project/core/constants/colors/homepage_color.dart';
+import 'package:vbt_sample_project/feature/bottomhttp/view/todos_view.dart';
+
+import '../../../feature/dioservice/view/photo_view.dart';
+import '../../../feature/homepage/view/homepage_view.dart';
 
 class BottomNavigation extends StatefulWidget {
-
-  const BottomNavigation({ Key? key}) : super(key: key);
+  final int index;
+  const BottomNavigation({
+    required  this.index,
+     Key? key}) : super(key: key);
 
   @override
   _BottomNavigationState createState() => _BottomNavigationState();
@@ -28,7 +34,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 setState(() {
                   selectedIndex = 0;
                   print("Anasayfa  tıklandı");
-               
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePageView(),));
                 });
               },
               icon: Icon(Icons.home,
@@ -39,11 +45,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
               onPressed: () {
                 setState(() {
                   selectedIndex = 1;
-                  print("Ayarlar tıklandı");
+                 Navigator.push(context, MaterialPageRoute(builder: (_)=>TodosPageView()));
+                 print("http sayfasına tıklandı");
             
                 });
               },
-              icon: Icon(Icons.settings,
+              icon: Icon(Icons.http,
                   size: addSizefromSmall(selectedIndex, 1),
                   color: _fillSelectColor(selectedIndex, 1))),
 
@@ -52,7 +59,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               onPressed: () {
                 setState(() {
                   selectedIndex = 2;
-                  print("Dosyalar tıklandı");
+                   Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => PhotoView(),), (route) => false);
             
                 });
               },

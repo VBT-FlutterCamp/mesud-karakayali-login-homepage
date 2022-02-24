@@ -96,7 +96,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
       style: TextButton.styleFrom(),
       child: Text(
         LoginStrings.forgotPassword,
-        style: context.textTheme.subtitle2,
+        
       ),
       onPressed: () {},
     );
