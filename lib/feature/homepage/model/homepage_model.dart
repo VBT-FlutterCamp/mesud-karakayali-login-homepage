@@ -35,6 +35,31 @@ List<HomePageModel> cardModels = [
       title: "Hello.io",
       subTitle: "https://www.hello.io",
      ),
+      HomePageModel(
+      title: "Coding Journey",
+      subTitle: "wwww.coding-journey.io",
+     ),
+  HomePageModel(
+      title: "Smashing Magazine",
+      subTitle: "https://www.smashingmagazine.com",
+    ),
+  HomePageModel(
+      title: "UX Labs",
+      subTitle: "https://www.uxlabs.co",
+   ),
+  HomePageModel(
+      title: "The Netlify Blog",
+      subTitle: "https://www.netlify.com/blog/",
+     ),
+  HomePageModel(
+      title: "Student Life",
+      subTitle: "https://www.studentlife.com",
+      ),
+  HomePageModel(
+      title: "Hello.io",
+      subTitle: "https://www.hello.io",
+     ),
+    
     
      
 ];

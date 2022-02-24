@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: NavigationRoute.generateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: const PhotoView(),
+      home: const HomePageView(),
       routes: {
        
         OnBoardView.routeName: (context) => const OnBoardView(),

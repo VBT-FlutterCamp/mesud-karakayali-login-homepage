@@ -1,6 +1,8 @@
 
 library homepage_view_body;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:kartal/kartal.dart';
 import 'package:vbt_sample_project/core/constants/colors/homepage_color.dart';
 import 'package:vbt_sample_project/core/constants/strings/homepage_strings.dart';
 import 'package:vbt_sample_project/feature/homepage/model/homepage_model.dart';
@@ -17,25 +19,18 @@ class HomePageViewBody extends StatefulWidget {
   _HomePageViewBodyState createState() => _HomePageViewBodyState();
 }
 
+
 class _HomePageViewBodyState extends State<HomePageViewBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
       color: HomePageColor.homePageBG,
-      child: Padding(
-        padding: EdgeInsets.only(left:10,right: 10,top: 10),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildTopText(),
-              _buildMiddleContext(),
-              _buildHomePageList()
-            ],
-          ),
-        ),
+      child: CustomScrollView(
+        slivers: [
+          _buildSliverAppBar(context),
+          _buildMiddleContext(),
+          _buildListView()
+        ],
       ),
     );
   }
@@ -72,4 +67,5 @@ class deleteIcon extends StatelessWidget {
 }
 
 
+  
 

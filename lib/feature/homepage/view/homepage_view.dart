@@ -17,10 +17,10 @@ class _HomePageViewState extends State<HomePageView> {
   Widget build(BuildContext context) {
     return const Scaffold(
       //FAB(Floating action ButTon)
-      floatingActionButton: MyCenterFAB(),
+      //floatingActionButton: MyCenterFAB(),
 
       //bottomNavigation üstüne gelmesini sağlayan lokasyon kodu
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       bottomNavigationBar: BottomNavigation(),
 

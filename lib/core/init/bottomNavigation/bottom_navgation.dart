@@ -19,7 +19,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       elevation: 10,
       shape: CircularNotchedRectangle(),
       notchMargin: 5,
-      color: Colors.green.withOpacity(0.8),
+      color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -27,11 +27,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
               onPressed: () {
                 setState(() {
                   selectedIndex = 0;
-                  print("ayarlara  tıklandı");
+                  print("Anasayfa  tıklandı");
                
                 });
               },
-              icon: Icon(Icons.settings,
+              icon: Icon(Icons.home,
                   size: addSizefromSmall(selectedIndex, 0),
                   color: _fillSelectColor(selectedIndex, 0))),
          
@@ -39,13 +39,26 @@ class _BottomNavigationState extends State<BottomNavigation> {
               onPressed: () {
                 setState(() {
                   selectedIndex = 1;
-                  print("favorilere tıklandı");
+                  print("Ayarlar tıklandı");
             
                 });
               },
-              icon: Icon(Icons.favorite,
+              icon: Icon(Icons.settings,
                   size: addSizefromSmall(selectedIndex, 1),
                   color: _fillSelectColor(selectedIndex, 1))),
+
+
+                   IconButton(
+              onPressed: () {
+                setState(() {
+                  selectedIndex = 2;
+                  print("Dosyalar tıklandı");
+            
+                });
+              },
+              icon: Icon(Icons.file_copy,
+                  size: addSizefromSmall(selectedIndex, 2),
+                  color: _fillSelectColor(selectedIndex, 2))),
           
         ],
       ),
@@ -53,7 +66,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   }
 
   _fillSelectColor(int selectedIndex, int i) {
-    return selectedIndex == i ? HomePageColor.homePageBG : Colors.white;
+    return selectedIndex == i ? Colors.blueGrey : HomePageColor.homePageBG;
   }
 
   addSizefromSmall(int selectedIndex, int i) {
