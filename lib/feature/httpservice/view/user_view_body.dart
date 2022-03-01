@@ -3,6 +3,7 @@ import 'package:vbt_sample_project/core/constants/strings/photo_view_strings.dar
 import 'package:vbt_sample_project/feature/httpservice/model/users_model.dart';
 import 'package:vbt_sample_project/feature/httpservice/service/user_service.dart';
 
+
 class HttpServiceViewBody extends StatefulWidget {
   const HttpServiceViewBody({Key? key}) : super(key: key);
 
@@ -11,18 +12,12 @@ class HttpServiceViewBody extends StatefulWidget {
 }
 
 class _HttpServiceViewBodyState extends State<HttpServiceViewBody> {
-  final UserService _service = UserService();
-  List<Users> _userslist = [];
+//  final UserService _service = UserService();
+ 
 
-  _init() async {
-    _userslist = await _service.getFetch;
-  }
 
-  @override
-  void initState() {
-    super.initState();
-    _init();
-  }
+
+
 
   @override
   Widget build(BuildContext context) {

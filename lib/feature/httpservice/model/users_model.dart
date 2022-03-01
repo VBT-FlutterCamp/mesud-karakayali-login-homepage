@@ -1,14 +1,8 @@
-// To parse this JSON data, do
-//
-//     final users = usersFromJson(jsonString);
 
-import 'dart:convert';
 
-List<Users> usersFromJson(String str) => List<Users>.from(json.decode(str).map((x) => Users.fromJson(x)));
+import 'package:vexana/vexana.dart';
 
-String usersToJson(List<Users> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
-
-class Users {
+class Users extends INetworkModel<Users> {
     Users({
         this.id,
         this.name,
@@ -50,6 +44,11 @@ class Users {
         "website": website,
         "company": company?.toJson(),
     };
+
+  @override
+  Users fromJson(Map<String, dynamic> json) {
+   return fromJson(json);
+  }
 }
 
 class Address {
